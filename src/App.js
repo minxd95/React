@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import MyName from "./MyName";
+import Counter from "./Counter";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+class App extends Component {
+  render() {
+    return (
+      <div>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <MyName
+            name="리액트" // props.name을 MyName 컴포넌트로 넘겨줌
+          />
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        <p>
+          <Counter />
+        </p>
+      </div>
+    );
+  }
 }
 
 export default App;
